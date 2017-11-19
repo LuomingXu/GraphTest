@@ -1,9 +1,9 @@
-#include"graph.h"
+ï»¿#include"graph.h"
 
 int main()
 {
-	int NumOfVertex = 0;//¶¥µã¸öÊý
-	int NumOfArc = 0;//»¡Êý	
+	int NumOfVertex = 0;//é¡¶ç‚¹ä¸ªæ•°
+	int NumOfArc = 0;//å¼§æ•°	
 	std::cout << "Please input the number of vertex :" << endl;
 	std::cin >> NumOfVertex;
 	std::cout << "Please input the number of arc :" << endl;
@@ -15,7 +15,19 @@ int main()
 	G.OutputVertexInfo();
 	G.OutputAdjMartix();
 	G.OutputDegree();
-	std::cout << "Please input any key to exit..." << endl;
+
+	std::cout << "Depth-first search:\n1  ";
+	try {G.DepthFirsrSearch(0);}
+	catch (const std::exception&) {}
+
+	//G.test();
+	G.ClearShown();
+	std::cout << endl;
+
+	std::cout << "Broadth-first search:\n1  ";
+	G.BroadthFirstSearch();
+
+	std::cout << endl << "Please input any key to exit..." << endl;
 	getchar();
 	getchar();
 	return 0;

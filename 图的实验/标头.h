@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include<iostream>
 using namespace std;
 
@@ -56,7 +56,7 @@ void PrintVertexInfo(int** array, int row, int column)
 		{
 			if (array[i][j] != 0)
 			{
-				std::cout << i + 1 << "��" << j + 1 << "֮���ȨΪ" << array[i][j] << endl;
+				std::cout << i + 1 << "与" << j + 1 << "之间的权为" << array[i][j] << endl;
 			}
 		}
 	}
